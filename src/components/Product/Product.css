@@ -1,0 +1,20 @@
+.product{
+   display: flex;
+   
+}
+.product-name, small{
+    margin-left: 20px;
+    color: hotpink;
+
+}
+.name-button{
+    color: rgb(243, 240, 240);
+    height: 35px;
+    font-size: 14px;
+    width: 120px;
+    border: 2px solid gray;
+    border-radius: 10px;
+    margin-left: 20px;
+    background-color: rgb(255, 47, 75);
+    cursor: pointer;
+}
