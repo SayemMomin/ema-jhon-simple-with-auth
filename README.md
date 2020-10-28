@@ -1,4 +1,4 @@
-## Live - [Ema John](https://github.com/SayemMomin/ema-jhon-simple-with-auth).
+## Live - [Ema John](https://first-firebase-simple.web.app).
 
 ### Features
 -	Every product shows details and customers can add to cart.
