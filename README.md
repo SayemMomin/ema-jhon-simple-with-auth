@@ -1,3 +1,20 @@
+## Live - [Ema John](https://github.com/SayemMomin/ema-jhon-simple-with-auth).
+
+### Features
+-	Every product shows details and customers can add to cart.
+-	Before confirm order customer have to login google account or email and password by firebase
+-	Login page protected by private route.
+-	To submit order from used by React-Hook-Form
+-	Customer also can SignOut
+
+
+### Technologies Uses: 
+**JS, React, Bootstrap, React-DatePicker. React Router, MongoDB, Firebase, Heroku.**
+
+### Server Site [Link](https://github.com/SayemMomin/ema-jhon-simple-server).
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
