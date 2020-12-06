@@ -6,6 +6,7 @@ import Product from '../Product/Product';
 import Cart from '../Cart/Cart';
 import { addToDatabaseCart, getDatabaseCart } from '../../utilities/databaseManager';
 import { Link } from 'react-router-dom';
+import loader from '../../images/loader.gif';
 
 const Shop = () => {
     //console.log(fakeData)
@@ -56,7 +57,7 @@ const Shop = () => {
     return (
         <div className="shop-container">
             <div className="product-container">
-                {
+                { products.length > 0 ?
                     products.map(pd => <Product 
                     key ={pd.key}
                     showaddToCart ={true}
@@ -64,6 +65,7 @@ const Shop = () => {
                     product= {pd}>
 
                     </Product> )
+                    : <img src={loader} alt="" className="img-fluid w-50" />
                 }
             </div>
             <div className="cart-container">

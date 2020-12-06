@@ -13,7 +13,7 @@ const Header = () => {
                 <Link to="/shop">Shop</Link>
                 <Link to="/review">Review</Link>
                 <Link to="/inventory">Manage</Link>
-                <button onClick={() => setLoggedInUser({})}>Sign Out</button>
+                <button className="button" onClick={() => setLoggedInUser({})}>Sign Out</button>
             </nav>
             <div>
                 

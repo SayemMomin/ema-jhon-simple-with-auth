@@ -7,6 +7,7 @@ import ReviewItem from '../ReviewItem/ReviewItem';
 import Cart from '../Cart/Cart';
 import image from '../../images/giphy.gif';
 import { useHistory } from 'react-router-dom';
+import loader from '../../images/loader.gif';
 
 const Review = () => {
     const [cart, setCart] = useState([])
@@ -51,17 +52,18 @@ const Review = () => {
                  happyImage
            }
            <p>Cart Items: {cart.length}</p>
-           {
+           { cart.length >0 ?
                 cart.map(pd => <ReviewItem 
                     key = {pd.key}
                     removeProduct = {removeProduct}
                     product={pd}></ReviewItem> )
+                : <img src={loader} alt="" className="img-fluid w-50" />
             }
            </div>
     
             <div className="cart-container">
             <Cart cart={cart}>
-                <button onClick={handlePlaceOrder}> Proceed CheckOut</button>
+                <button className="cart-button" onClick={handlePlaceOrder}> Proceed CheckOut</button>
                 {/* <button onClick={handlePlaceOrder}> place the order</button> */}
             </Cart>
             </div>

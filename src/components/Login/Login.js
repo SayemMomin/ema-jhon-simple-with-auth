@@ -3,7 +3,7 @@ import { useContext } from 'react';
 import { UserContext } from '../../App';
 import { useHistory, useLocation } from 'react-router-dom';
 import { initializeLoginFramework, handleGoogleSignIn, handleSignOut, handleFbSignIn, createUserWithEmailAndPassword, signInWithEmailAndPassword } from './loginManager';
-
+import './Login.css'
 
 
 function Login() {
@@ -89,12 +89,16 @@ function Login() {
 
 
   return (
-    <div style={{textAlign: 'center'}}>
+    <div style={{textAlign: 'center', marginTop: '20px'}}>
       { user.isSignedIn ? <button onClick={signOut}>Sign Out</button> :
-        <button onClick={googleSignIn}>Sign In</button>
+        <button className="login-btn" onClick={googleSignIn}>Sign In With Google</button>
       }
-      <br/>
-      <button onClick={fbSignIn}>Sign in using Facebook</button>
+      
+      <div style={{marginTop: '20px'}}>
+      { user.isSignedIn ? <button onClick={signOut}>Sign Out</button> :
+        <button className="login-btn" onClick={fbSignIn}>Sign in using Facebook</button>
+      } </div> 
+      
       {
         user.isSignedIn && <div>
           <p>Welcome, {user.name}!</p>
